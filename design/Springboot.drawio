@@ -1,9 +1,68 @@
-<mxfile host="app.diagrams.net" modified="2024-04-10T15:18:45.528Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" version="24.2.0" etag="Qh242_Sjnq_UpUa6Gmrd" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-10T15:39:08.093Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="V0Z0BWZbDg-WqlMfQ_TN" version="24.2.0" type="github">
   <diagram name="第 1 页" id="wLCHkNbt7bF0E3TjqUrD">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-1" target="fIq_qW-KFdGVRDiUutCO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-1" value="首先会注册ApplicationContextInitializer&lt;div&gt;ApplicationListerners&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="90" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-2" value="准备Environment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="230" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-3" target="fIq_qW-KFdGVRDiUutCO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-3" value="发送Environment prepared&lt;div&gt;EnvironmentPostProcesserApplicationListener 会监听到事件&lt;br&gt;从spring.factories中找到所有的EnvironmentPostProcesser处理环境&lt;br&gt;会加载我们的配置文件&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="330" width="390" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.487;entryY=-0.06;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-2" target="fIq_qW-KFdGVRDiUutCO-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-7" target="fIq_qW-KFdGVRDiUutCO-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-7" value="创建Context，绑定环境" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="480" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-9" target="fIq_qW-KFdGVRDiUutCO-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-9" value="发送Context初始化事件" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="590" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-11" target="fIq_qW-KFdGVRDiUutCO-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-11" value="refresh&amp;nbsp; &amp;nbsp;Context" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="700" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-13" target="fIq_qW-KFdGVRDiUutCO-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-13" value="准备BeanFactory" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="820" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-16" value="调用BeanFactoryPostProcesser" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="940" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19" target="fIq_qW-KFdGVRDiUutCO-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-19" value="ConfigurationPostProcesser&lt;br&gt;调用AitoConfigurationImporter获取到Spring.factories中的所有EnableAutoConfiguration&lt;br&gt;&lt;br&gt;然后去将这些AutoConfiguration的Import，BeanDefinitionsRegistrar，BeanMethod等全部注册到BeanDefinitionsMap中&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;这就是Springboot自动注册的原理&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="885" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="655" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
