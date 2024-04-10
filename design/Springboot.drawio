@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-10T15:39:08.093Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="V0Z0BWZbDg-WqlMfQ_TN" version="24.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-10T15:41:25.095Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Es2mPAzXQFNlRM_voeJw" version="24.2.0" type="github">
   <diagram name="第 1 页" id="wLCHkNbt7bF0E3TjqUrD">
     <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -60,8 +60,20 @@
         <mxCell id="fIq_qW-KFdGVRDiUutCO-19" value="ConfigurationPostProcesser&lt;br&gt;调用AitoConfigurationImporter获取到Spring.factories中的所有EnableAutoConfiguration&lt;br&gt;&lt;br&gt;然后去将这些AutoConfiguration的Import，BeanDefinitionsRegistrar，BeanMethod等全部注册到BeanDefinitionsMap中&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;这就是Springboot自动注册的原理&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="885" width="370" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="fIq_qW-KFdGVRDiUutCO-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="655" y="1190" width="120" height="60" as="geometry" />
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-20" target="fIq_qW-KFdGVRDiUutCO-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-20" value="注册BeanPostProcesser" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="637.5" y="1130" width="155" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-22" target="fIq_qW-KFdGVRDiUutCO-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-22" value="注册监听器" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="655" y="1260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-24" value="实例化单例Bean" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="655" y="1400" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
