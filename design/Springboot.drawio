@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-12T14:26:34.223Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="FMhLGnVO8LjlGXYc2u9J" version="24.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-12T14:32:00.346Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="hpDQo-Hqn8033XEutSco" version="24.2.0" type="github">
   <diagram name="第 1 页" id="wLCHkNbt7bF0E3TjqUrD">
     <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -57,7 +57,7 @@
         <mxCell id="fIq_qW-KFdGVRDiUutCO-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19" target="fIq_qW-KFdGVRDiUutCO-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fIq_qW-KFdGVRDiUutCO-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19">
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19" target="fIq_qW-KFdGVRDiUutCO-27">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1100" y="850" as="targetPoint" />
           </mxGeometry>
@@ -86,7 +86,7 @@
           <mxGeometry x="655" y="1400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="fIq_qW-KFdGVRDiUutCO-27" value="AOPAutoConfiguration&lt;div&gt;注入AnnotationAspectAutoProxyCreater&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1100" y="810" width="310" height="80" as="geometry" />
+          <mxGeometry x="1100" y="400" width="310" height="80" as="geometry" />
         </mxCell>
         <mxCell id="fIq_qW-KFdGVRDiUutCO-29" value="TransactionAutoConfiguration&lt;br&gt;通过@EnableTransactionManagement注解的&lt;br&gt;TransactionManagementConfiurationSelector&lt;br&gt;注入了三个很重要的类&lt;div&gt;BeanFactoryTransactionAttributeSourceAdvisor&lt;br&gt;TransactionAttributeSource&lt;br&gt;&lt;/div&gt;&lt;div&gt;TransactionInterceptor&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1110" y="910" width="300" height="140" as="geometry" />
@@ -233,6 +233,12 @@
         </mxCell>
         <mxCell id="fIq_qW-KFdGVRDiUutCO-84" value="事务管理的流程&lt;div&gt;首先通过Bean在初始化过程中会被Aop的AnnotationAspectAutoProxyCreater拦截&lt;/div&gt;&lt;div&gt;然后获取到所有的Advisor，其中BeanFactoryTransactionAttributeSourceAdvisor&lt;/div&gt;&lt;div&gt;会将或者Bean拦截到，因为这个类的pointcut方法就是通过AnnotationTransactionAttributeSource去获取类上的@Transaction注解信息，获取到之后&lt;/div&gt;&lt;div&gt;AnnotationTransactionAttributeSource会顺便保存到一个Map中&lt;br&gt;然后通过Aop形成代理对象&lt;br&gt;每当通过Bean去执行@Transactional修饰的方法时，就会被TransationInterceptor拦截&lt;br&gt;进行事务操作&lt;br&gt;主要原理就是通过AnnotationTransactionAttributeSource获取到当前拦截的方法的TransactionDefinition对象，然后再去获取事务管理器&lt;br&gt;通过事务管理器，TransactionDefinition对象去执行事务的逻辑&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1410" y="1380" width="500" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-86" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;两种方式：一种是通过@Aspect注解去定义一个切面，当拦截到Bean上有这个注解时&lt;/div&gt;&lt;div&gt;就会对其创建代理对象&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;一种方式是通过实现Advisor然后注入到SpringBean的容器当中，Aop拦截Bean时就会通过&lt;br&gt;获取到容器的所有Advisor对象，然后调用Advisor的pointcut的matches方法&lt;br&gt;如果成功匹配就会将这个Advisor去加入到方法的拦截器中&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="330" width="510" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.584;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-27" target="fIq_qW-KFdGVRDiUutCO-86">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
