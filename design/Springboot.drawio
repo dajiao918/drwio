@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-10T15:41:25.095Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Es2mPAzXQFNlRM_voeJw" version="24.2.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-12T14:26:34.223Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="FMhLGnVO8LjlGXYc2u9J" version="24.2.0" type="github">
   <diagram name="第 1 页" id="wLCHkNbt7bF0E3TjqUrD">
     <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -57,6 +57,16 @@
         <mxCell id="fIq_qW-KFdGVRDiUutCO-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19" target="fIq_qW-KFdGVRDiUutCO-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1110" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="fIq_qW-KFdGVRDiUutCO-19" value="ConfigurationPostProcesser&lt;br&gt;调用AitoConfigurationImporter获取到Spring.factories中的所有EnableAutoConfiguration&lt;br&gt;&lt;br&gt;然后去将这些AutoConfiguration的Import，BeanDefinitionsRegistrar，BeanMethod等全部注册到BeanDefinitionsMap中&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;这就是Springboot自动注册的原理&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="885" width="370" height="170" as="geometry" />
         </mxCell>
@@ -74,6 +84,155 @@
         </mxCell>
         <mxCell id="fIq_qW-KFdGVRDiUutCO-24" value="实例化单例Bean" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="655" y="1400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-27" value="AOPAutoConfiguration&lt;div&gt;注入AnnotationAspectAutoProxyCreater&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="810" width="310" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-29" value="TransactionAutoConfiguration&lt;br&gt;通过@EnableTransactionManagement注解的&lt;br&gt;TransactionManagementConfiurationSelector&lt;br&gt;注入了三个很重要的类&lt;div&gt;BeanFactoryTransactionAttributeSourceAdvisor&lt;br&gt;TransactionAttributeSource&lt;br&gt;&lt;/div&gt;&lt;div&gt;TransactionInterceptor&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="910" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.457;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-29" target="fIq_qW-KFdGVRDiUutCO-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-37" value="Advisor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1580" y="950" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-40" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-38" target="fIq_qW-KFdGVRDiUutCO-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-61" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-40">
+          <mxGeometry x="0.0321" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-38" value="PointcutAdvisor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-41" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-39" target="fIq_qW-KFdGVRDiUutCO-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-63" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-41">
+          <mxGeometry x="0.0699" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-39" value="IntroductionAdvisor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1650" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-42" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-33" target="fIq_qW-KFdGVRDiUutCO-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-60" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-42">
+          <mxGeometry x="0.1458" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-68" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-45" target="fIq_qW-KFdGVRDiUutCO-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-69" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-68">
+          <mxGeometry x="0.033" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-45" value="MethodInterceptor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-47" value="Advice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="1120" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-48" value="Advisor就是切面" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1572" y="910" width="106" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-49" value="Advice就是通知" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1860" y="1055" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-50" value="Pointcut就是切点" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="1000" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-53" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-33" target="fIq_qW-KFdGVRDiUutCO-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-66" value="持有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-53">
+          <mxGeometry x="0.0433" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-33" value="&lt;div&gt;BeanFactoryTransactionAttributeSourceAdvisor&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1120" width="350" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-56" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-31" target="fIq_qW-KFdGVRDiUutCO-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-59" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-56">
+          <mxGeometry x="0.1726" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-57" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-31" target="fIq_qW-KFdGVRDiUutCO-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-65" value="持有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-57">
+          <mxGeometry x="-0.0212" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-31" value="TransactionInterceptor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="1280" width="145" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-32" value="AnnotationTransactionAttributeSource&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="940" y="1300" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-58" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.552;entryY=-0.03;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-33" target="fIq_qW-KFdGVRDiUutCO-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-67" value="持有" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-58">
+          <mxGeometry x="-0.4142" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-70" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1340" width="310" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-71" target="fIq_qW-KFdGVRDiUutCO-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-71" value="class+method=key" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1360" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-72" value="TransactionAttribute" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1121" y="1360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-74" value="class+method=key" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1360" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-76" target="fIq_qW-KFdGVRDiUutCO-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-76" value="class+method=key" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1440" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-81" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="fIq_qW-KFdGVRDiUutCO-77">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="1620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-83" value="实现" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="fIq_qW-KFdGVRDiUutCO-81">
+          <mxGeometry x="0.1036" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-77" value="TransactionAttribute" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1121" y="1440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-78" value="class+method=key" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1440" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-82" value="TransactionDefinition&lt;div&gt;隔离级别&lt;/div&gt;&lt;div&gt;是否制度&lt;/div&gt;&lt;div&gt;传播级别&lt;/div&gt;&lt;div&gt;超时时间&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="1620" width="150" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fIq_qW-KFdGVRDiUutCO-84" value="事务管理的流程&lt;div&gt;首先通过Bean在初始化过程中会被Aop的AnnotationAspectAutoProxyCreater拦截&lt;/div&gt;&lt;div&gt;然后获取到所有的Advisor，其中BeanFactoryTransactionAttributeSourceAdvisor&lt;/div&gt;&lt;div&gt;会将或者Bean拦截到，因为这个类的pointcut方法就是通过AnnotationTransactionAttributeSource去获取类上的@Transaction注解信息，获取到之后&lt;/div&gt;&lt;div&gt;AnnotationTransactionAttributeSource会顺便保存到一个Map中&lt;br&gt;然后通过Aop形成代理对象&lt;br&gt;每当通过Bean去执行@Transactional修饰的方法时，就会被TransationInterceptor拦截&lt;br&gt;进行事务操作&lt;br&gt;主要原理就是通过AnnotationTransactionAttributeSource获取到当前拦截的方法的TransactionDefinition对象，然后再去获取事务管理器&lt;br&gt;通过事务管理器，TransactionDefinition对象去执行事务的逻辑&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="1380" width="500" height="290" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
